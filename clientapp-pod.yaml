@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-app
+  namespace: kernelns
+  labels: 
+    app: client-app
+spec:
+  containers:
+  - name: client-app-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  nodeName: minikube-m02
